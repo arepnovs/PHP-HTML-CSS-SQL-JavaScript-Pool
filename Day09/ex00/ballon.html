@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <div id="bang" style="margin: auto; background-color: red; border-radius: 50%;">
+            <script>
+            var el = document.getElementById('bang');
+            var size = el.style.width;
+            el.style.width = '200px';
+            el.style.height = '200px';
+            el.onclick = function increase() {
+                console.log(size);
+                size = parseInt(el.style.width) + 10;
+                el.style.width = size + 'px';
+                el.style.height = size + 'px';
+                if (this.style.backgroundColor === "red")
+                    this.style.backgroundColor = "green";
+                else if (this.style.backgroundColor === "green")
+                    this.style.backgroundColor = "blue";
+                else if (this.style.backgroundColor === "blue")
+                    this.style.backgroundColor = "red";
+                if (this.style.width > '420px')
+                {
+                    this.style.width = 200 + 'px';
+                    this.style.height = 200 + 'px';
+                }
+            };
+
+            el.onmouseout = function decrease() {
+                if (el.style.width > '200px')
+                {
+                    size = parseInt(el.style.width) - 5;
+                    el.style.width = size + 'px';
+                    el.style.height = size + 'px';
+                }
+                if (this.style.backgroundColor === "red")
+                    this.style.backgroundColor = "blue";
+                else if (this.style.backgroundColor === "green")
+                    this.style.backgroundColor = "red";
+                else if (this.style.backgroundColor === "blue")
+                    this.style.backgroundColor = "green";
+            }
+
+            </script>
+        </div>
+    </body>
+</html>

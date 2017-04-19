@@ -1,0 +1,45 @@
+Vector ----------------------------------------------------------------------
+The Vector class allows to place points in space and even give
+them a simple color. 
+
+Used with Color.class.php and Vertex.class.php.
+
+Vector is represented according to five characteristics:
+• Its x axis coordinate
+• Its y axis coordinate
+• Its z depth coordinate
+
+An instance can be contructed from distinct x, y, z and w constitutives:
+Example:
+	new Vertex( array( 'x' => -12.34, 'y' => 23.45, 'z' => -34.56 ) );
+
+The class provides the following methods :
+
+Vector magnitude();
+Returns the vector’s length.
+
+Vector normalize();
+returns a normalized version of the vector. 
+If the vector is already normalized, returns a fresh copy of the vector.
+
+Vector add(Vector $rhs);
+Returns the sum vector of both vectors.
+
+Vector sub(Vector $rhs);
+Returns the difference vector of both vectors.
+
+Vector opposite();
+Returns the opposite vector.
+
+Vector  scalarProduct($k);
+Returns the multiplication of the vector with a scalar.
+
+Vector dotProduct(Vector $rhs);
+Returns the scalar multiplication of both vectors.
+
+Vector cos(Vector $rhs);
+Returns the angle’s cosinus between both vectors.
+
+Vector crossProduct(Vector $rhs);
+Returns the cross multiplication of both vectors (right-hand mark!)
+---------------------------------------------------------------------- Vector

@@ -1,0 +1,17 @@
+Vertex ----------------------------------------------------------------------
+The Vertex class offers a coordinate encapsulation and
+provides reading and writing assessors for the corresponding attributes.
+
+Used with Color.class.php.
+
+Vertex is represented according to five characteristics:
+• Its x axis coordinate
+• Its y axis coordinate
+• Its z depth coordinate
+• Coordinate w. In practice, this coordinate is often worth 1.0 and will simplify matrix calculations.
+• A color represented by an instance of the Color Class.
+
+An instance can be contructed from distinct x, y, z, w and color constitutives:
+Example: 
+	new Vertex( array('x' => 0.0, 'y' => 0.0, 'z' => 1.0, 'color' => $blue));
+---------------------------------------------------------------------- Vertex 
