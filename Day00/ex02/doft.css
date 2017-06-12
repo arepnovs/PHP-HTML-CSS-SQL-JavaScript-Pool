@@ -92,7 +92,7 @@ form {
 }
 
 .brick{
-    background: url("/nfs/2016/a/arepnovs/Downloads/brick.jpg");
+    background: url("resources/brick.jpg");
     width: 90%;
     height: 100px;
 }
@@ -129,6 +129,10 @@ form {
     position: absolute;
     margin-left: 1120px;
     margin-top: 550px;
+}
+
+.underscore {
+     text-shadow: 0px 4px 3px red, 0 0 1em red;
 }
 
 a:hover img  {
