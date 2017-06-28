@@ -6,5 +6,5 @@ FROM
 GROUP BY
     floor_number
 ORDER BY
-    SUM(nb_seats)
+    seats
 DESC;

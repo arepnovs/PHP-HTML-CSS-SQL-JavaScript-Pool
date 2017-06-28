@@ -1,5 +1,5 @@
 SELECT
-    COUNT(*) AS 'nb_short-films'
+    COUNT(`title`) AS 'nb_short-films'
 FROM
     film
 WHERE

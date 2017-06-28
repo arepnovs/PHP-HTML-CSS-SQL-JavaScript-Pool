@@ -1,6 +1,6 @@
 SELECT
-    COUNT(*) AS 'films'
+    COUNT(DISTINCT id_film) AS 'movies'
 FROM
     member_history
 WHERE
-    DATE >= '2006-10-30' AND DATE <= '2007-07-27' OR MONTH(DATE) = '12' AND DAY(DATE) = '24';
+    DAY(`date`) = 24 AND MONTH(`date`) = 12 OR DATE BETWEEN '2006-10-30' AND '2007-07-27';

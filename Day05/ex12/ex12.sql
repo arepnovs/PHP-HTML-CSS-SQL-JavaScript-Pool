@@ -3,9 +3,8 @@ SELECT
     first_name
 FROM
     user_card
-INNER JOIN member ON id_user = id_user_card
 WHERE
-    last_name LIKE '%-%' OR first_name LIKE '%-%'
+    (last_name REGEXP '[a-zA-Z]+-[a-z]+' OR first_name REGEXP '[a-zA-Z]+-[a-z]+')
 ORDER BY
     last_name,
     first_name;

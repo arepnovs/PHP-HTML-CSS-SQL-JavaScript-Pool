@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-echo"Enter a number: ";
+echo"Enter a number:";
 while ($num = fgets(STDIN))
 {
 	$f = "0";

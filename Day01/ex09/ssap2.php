@@ -17,7 +17,7 @@ function get_ascii($char)
 
 function ascii_compare($str1, $str2)
 {
-	if ($str1 == $str2)
+	if ($str1 === $str2)
 		return 0;
 	$s1 = str_split($str1, 1);
 	$s2 = str_split($str2, 1);

@@ -4,7 +4,7 @@
 function ft_split($str)
 {
 	$arr = explode(" ", $str);
-	if (!empty($arr)|| strcmp("0", $el) == 0)
+	if (!empty($arr) || strcmp("0", $el) == 0)
 	{ 
 		foreach ($arr as $el)
 		{
@@ -15,30 +15,16 @@ function ft_split($str)
 	return $res;
 }
 
-if ($argc == 2)
+$arg = ft_split($argv[1]);
+$len = count($arg);
+for($i = 0; $i < $len; $i++)
 {
-	$arr = ft_split($argv[1]);
-	if (!empty($arr)|| strcmp("0", $el) == 0)
-	{
-		foreach ($arr as $el)
-		{
-			if (!empty($el) || strcmp("0", $el) == 0)
-				$res[] = $el;
-		}
-	}
-	$i = 0;
-	$total = count($res);
-	if (!empty($arr)|| strcmp("0", $el) == 0)
-	{
-		foreach ($res as $el)
-		{
-			echo"$el";
-			if ($i <= $total)
-				echo" ";
-			$i++;
-		}
-		echo"\n";
-	}	
+    if (!empty($arg[$i]) || $arg[0] == '0')
+        echo "$arg[$i]";
+    if ($i + 1 >= $len)
+        echo "\n";
+    else if ($arg[$i + 1] != ',')
+        echo " ";
 }
 
 ?>
